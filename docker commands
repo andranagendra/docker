@@ -1,0 +1,46 @@
+docker --version
+docker pull imagename
+docker search image
+docker image
+docker pull image
+docker run -dti --name containername  imagename /bin/bash
+docker run -ti --name containername  imagename /bin/bash
+docker ps
+docker ps -a
+docker attach container name/ containerid
+cntl+PQ (to save and exit outside of container)
+docker inspect containername or container id (To display container information)
+cd /var/lib/docker
+docker stop containername or container id
+docker startcontainername or container id
+docker restart containername or container id
+docker rm containername or container id ( In this time container must be stop )
+docker rm -f containername or container id (To remove the container at the running time)
+docker rmi imagename
+docker rmi -f imagename 
+docker tag imagename dockerhub repository url:custamized image name
+docker login:
+username:
+password:
+docker puhh  repopath:imagename
+VOLUMes:
+fdisk -l
+fdisk /dev/hhdname
+:n
+:p
+to give sector number (1-4):1
+:w (To save the hard disk partition )
+lsblk ---->>>> to display  hdd information
+
+partx 
+kpartx
+partprobe hdd name
+mkdir volume
+mount hdd volume
+vi /etc/fstab --> to save hard disks volumes perminently
+df -h
+docker images 
+docker run -dti --name containername -v(volume) (volumepath):/to attach volume dircetory  -p (port forwarding) container portid: docker engine portid
+
+
+To deploy web applications through docker container
